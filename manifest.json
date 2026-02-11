@@ -6,5 +6,15 @@
   "action": {
     "default_popup": "index.html",
     "default_icon": "hackathon.png"
+  },
+    "permissions": [
+    "tabs"          
+  ],
+  "host_permissions": [     
+    "https://*/*",
+    "http://*/*"
+  ],
+  "background": {
+    "service_worker": "checkAi.js"
   }
 }
