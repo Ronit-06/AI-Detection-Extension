@@ -3,6 +3,7 @@ const AI_DOMAINS = [
   'chat.openai.com',
   'chatgpt.com',
   'openai.com/chat',
+  'openai.com',
   
   // Anthropic
   'claude.ai',
