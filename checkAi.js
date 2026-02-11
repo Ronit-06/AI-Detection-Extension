@@ -64,7 +64,7 @@ chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
 chrome.tabs.onActivated.addListener((activeInfo) => {
   chrome.tabs.get(activeInfo.tabId, (tab) => {
     if (tab.url) {
-      checkIfAIUrl(tab.url, activeInfo.tabId);
+      isAIDomain(tab.url);
     }
   });
 });
