@@ -49,14 +49,29 @@ function isAIDomain(url) {
   }
 }
 
+function isWhiteListDomain(url) {
+      try {
+    const urlObj = new URL(url);
+    const hostname = urlObj.hostname.replace('www.', '');
+    
+    return WHITELIST_AI_SITES.includes(aiDomain => 
+      hostname === aiDomain || hostname.endsWith('.' + aiDomain)
+    );
+  } catch (e) {
+    return false;
+  }
+}
 
 
 
 chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
   console.log("tab loaded");
   if (changeInfo.status === 'complete' && tab.url) {
-    isAIDomain(tab.url, tabId);
-  }
+    if (isAIDomain(tab.url, tabId) && isWhiteListDomain(tab.url)) {
+        console.log("launch pop up")
+        }
+    }
+  
 });
 
 // Listen for tab activation (when user switches tabs)
