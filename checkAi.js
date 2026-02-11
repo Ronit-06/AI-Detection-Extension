@@ -49,14 +49,12 @@ function isAIDomain(url) {
 }
 
 
-if (isAIDomain(tab.url)) {
-  console.log('Known AI website detected!');
-}
+
 
 chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
-  
+  console.log("tab loaded");
   if (changeInfo.status === 'complete' && tab.url) {
-    checkIfAIUrl(tab.url, tabId);
+    isAIDomain(tab.url, tabId);
   }
 });
 
