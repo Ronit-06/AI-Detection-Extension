@@ -67,7 +67,7 @@ function isWhiteListDomain(url) {
 chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
   console.log("tab loaded");
   if (changeInfo.status === 'complete' && tab.url) {
-    if (isAIDomain(tab.url, tabId) && isWhiteListDomain(tab.url)) {
+    if (isAIDomain(tab.url, tabId) && !isWhiteListDomain(tab.url)) {
         console.log("launch pop up")
         }
     }
