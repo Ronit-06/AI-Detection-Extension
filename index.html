@@ -1,6 +1,18 @@
 <html>
   <body>
-    <h1>Hello Extensions</h1>
-    <script src="index.js"></script>
+    <main>
+      <h1>AI Website Detection</h1>
+      <section>
+        <h2>Detection Status</h2>
+        <p id="detection-status">Initializing...</p>
+        <p id="detection-details" hidden></p>
+        <p id="detection-error" hidden></p>
+      </section>
+      <section>
+        <h2>Recent Signals</h2>
+        <ul id="signal-log" aria-live="polite"></ul>
+      </section>
+    </main>
+    <script type="module" src="index.js"></script>
   </body>
 </html>

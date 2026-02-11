@@ -3,6 +3,7 @@
   "description": "AI Website Detection is a Chrome extension that detects if a website is authorized to be used or not.",
   "version": "1.0",
   "manifest_version": 3,
+  "permissions": ["tabs"],
   "action": {
     "default_popup": "index.html",
     "default_icon": "hackathon.png"

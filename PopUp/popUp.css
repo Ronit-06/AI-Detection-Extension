@@ -1,0 +1,28 @@
+.text{
+    font-family: Arial;
+    color: #000;
+}
+
+.button{
+    border-radius: 5px;
+    padding: 10px 20px;
+
+}
+
+.popUp{
+    display: flex;
+    flex-direction: column;
+}
+
+.buttonBox{
+    display: flex;
+    flex-direction: row;
+}
+
+.redirect{
+    background-color: #91f091;
+}
+
+.continue{
+    background-color: aliceblue;
+}

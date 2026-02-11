@@ -1,11 +1,21 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <link rel="stylesheet" href="popUp.css">
-</head>
-<body>
-  <h1>My Extension</h1>
-  <button id="myButton">Click me</button>
-  <script src="popup.js"></script>
-</body>
+    <html>
+        <head>
+            <link rel="stylesheet" href="popUp.css">
+        </head>
+    <body>
+        <div class="popUp">
+            <h1 class="text">This website is not on your company's approved AI list</h1>
+            <h2 class="text">By contiuing onto this website you are confirming to not using sensitive data</h2>
+            
+            <div class="buttonBox">
+                <!-- This will redirect to an approved AI site -->
+                <button class="button redirect" id="redirect"> Redirect to Approved AI site</button> 
+            
+                <!-- This will continue on to the site -->
+                <button class="button continue" id="continue"> Continue </button>
+            </div>
+        </div>
+        <script src="popup.js"></script>
+    </body>
 </html>
